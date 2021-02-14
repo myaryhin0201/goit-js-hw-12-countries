@@ -1,0 +1,37 @@
+{{#each this}}
+<h2 class="country__name">{{name}}</h2>
+<div class="flex">
+    <div>
+        <p><strong>Native name: </strong>{{nativeName}}</p>
+        <p>
+            <strong>Capital: </strong>{{capital}}
+        </p>
+        <p>
+            <strong>Population: </strong>{{population}}
+        </p>
+        <p>
+            <strong>Languages: </strong>
+        <ul>
+            {{#each languages}}
+            <li>
+                {{name}}
+            </li>
+            {{/each}}
+        </ul>
+        </p>
+
+        <p>
+            <strong>TimeZone: </strong>
+        <ul>
+            {{#each timezones}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+        </p>
+    </div>
+    <div class="boxFlag"><img class="flagImg" src="{{flag}}" alt="Флаг {{name}}" width="480" class="country-flag"></div>
+
+</div>
+{{/each}}
